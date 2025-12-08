@@ -18,20 +18,20 @@ function isPalindroma (fraseDaVerificare) {
         charSaverFromStart = fraseDaVerificare[counterFromStart];
         charSaverFromEnd = fraseDaVerificare[counterFromEnd];
 
-        while (charSaverFromStart === " ") {++counterFromStart; charSaverFromStart = fraseDaVerificare[counterFromStart];};
-        while (charSaverFromEnd === " ") {--counterFromEnd; charSaverFromEnd = fraseDaVerificare[counterFromEnd];};
+        while (charSaverFromStart === " ") {++counterFromStart; charSaverFromStart = fraseDaVerificare[counterFromStart];}
+        while (charSaverFromEnd === " ") {--counterFromEnd; charSaverFromEnd = fraseDaVerificare[counterFromEnd];}
 
         if (charSaverFromStart === charSaverFromEnd) {
             counterFromEnd -= 1
-        };
+        }
 
         if (charSaverFromStart === charSaverFromEnd && counterFromStart === counterFromEnd) {
-            console.log("Wow la frase è palindroma!!");
-        };
+            console.log("Wow la parola è palindroma!!");
+        }
 
         if (charSaverFromStart !== charSaverFromEnd) {
 
-            console.log("La frase non è palindroma!!");
+            console.log("La parola non è palindroma!!");
             break;
         }
 
