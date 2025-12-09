@@ -28,7 +28,7 @@ let sumOfNumbers = numeroUtente + numeroPC;
 
 let isPariSaver = isPari(sumOfNumbers);
 
-console.log(isPariSaver)
+console.log(isPariSaver);
 
 if ( sceltaUtente === isPariSaver) {
     console.log("Hey, hai vinto!");
@@ -53,7 +53,7 @@ function isPari (number) {
         return "pari";
     }
 
-    else if (number % 2 !== 0) {
+    else {
         return "dispari";
     }
 }

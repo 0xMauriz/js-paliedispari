@@ -1,12 +1,12 @@
 
-let frase  = prompt("Inserisci una frase per verificare se è palindroma: ");
+let frase = prompt("Inserisci una frase per verificare se è palindroma: ");
 
 console.log(frase);
 
-isPalindroma(frase);
+isPalindromaRev(frase);
 
 
-function isPalindroma (fraseDaVerificare) {
+function isPalindroma(fraseDaVerificare) {
 
     let counterFromStart, counterFromEnd;
     let charSaverFromEnd, charSaverFromStart;
@@ -18,8 +18,8 @@ function isPalindroma (fraseDaVerificare) {
         charSaverFromStart = fraseDaVerificare[counterFromStart];
         charSaverFromEnd = fraseDaVerificare[counterFromEnd];
 
-        while (charSaverFromStart === " ") {++counterFromStart; charSaverFromStart = fraseDaVerificare[counterFromStart];}
-        while (charSaverFromEnd === " ") {--counterFromEnd; charSaverFromEnd = fraseDaVerificare[counterFromEnd];}
+        while (charSaverFromStart === " ") { ++counterFromStart; charSaverFromStart = fraseDaVerificare[counterFromStart]; }
+        while (charSaverFromEnd === " ") { --counterFromEnd; charSaverFromEnd = fraseDaVerificare[counterFromEnd]; }
 
         if (charSaverFromStart === charSaverFromEnd) {
             counterFromEnd -= 1
@@ -27,6 +27,7 @@ function isPalindroma (fraseDaVerificare) {
 
         if (charSaverFromStart === charSaverFromEnd && counterFromStart === counterFromEnd) {
             console.log("Wow la parola è palindroma!!");
+            break;
         }
 
         if (charSaverFromStart !== charSaverFromEnd) {
@@ -36,4 +37,43 @@ function isPalindroma (fraseDaVerificare) {
         }
 
     };
+}
+
+function isPalindromaRev(fraseDaVerificare) {
+
+    let counterFromStart, counterFromEnd;
+    let charSaverFromEnd, charSaverFromStart;
+    let wordLength = fraseDaVerificare.length;
+
+
+    counterFromEnd = wordLength - 1;
+
+    if (wordLength % 2 === 0) {
+
+        for (counterFromStart = 0; counterFromStart !== (wordLength / 2) - 1 && counterFromEnd !== (wordLength / 2); counterFromStart++) {
+
+            charSaverFromStart = fraseDaVerificare[counterFromStart];
+            console.log(charSaverFromStart);
+            charSaverFromEnd = fraseDaVerificare[counterFromEnd];
+            console.log(charSaverFromEnd);
+
+            if (charSaverFromStart === charSaverFromEnd) {
+                counterFromEnd -= 1
+            };
+
+
+            if (charSaverFromStart === charSaverFromEnd && counterFromStart === wordLength / 2 && counterFromEnd === wordLength / 2) {
+                console.log("Wow la parola è palindroma!!");
+                break;
+            };
+
+            if (charSaverFromStart !== charSaverFromEnd) {
+
+                console.log("La parola non è palindroma!!");
+                break;
+            };
+
+        }
+
+    }
 }
