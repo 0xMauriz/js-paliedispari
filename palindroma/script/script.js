@@ -50,7 +50,7 @@ function isPalindromaRev(fraseDaVerificare) {
 
     if (wordLength % 2 === 0) {
 
-        for (counterFromStart = 0; counterFromStart !== (wordLength / 2) - 1 && counterFromEnd !== (wordLength / 2); counterFromStart++) {
+        for (counterFromStart = 0; counterFromStart < (wordLength / 2);) {
 
             charSaverFromStart = fraseDaVerificare[counterFromStart];
             console.log(charSaverFromStart);
@@ -58,11 +58,12 @@ function isPalindromaRev(fraseDaVerificare) {
             console.log(charSaverFromEnd);
 
             if (charSaverFromStart === charSaverFromEnd) {
-                counterFromEnd -= 1
+                --counterFromEnd
+                ++counterFromStart
             };
 
 
-            if (charSaverFromStart === charSaverFromEnd && counterFromStart === wordLength / 2 && counterFromEnd === wordLength / 2) {
+            if (counterFromStart >= counterFromEnd) {
                 console.log("Wow la parola è palindroma!!");
                 break;
             };
