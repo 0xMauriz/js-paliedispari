@@ -55,6 +55,10 @@ function isPalindromaRev(fraseDaVerificare) {
             charSaverFromStart = fraseDaVerificare[counterFromStart];
             charSaverFromEnd = fraseDaVerificare[counterFromEnd];
 
+            
+        while (charSaverFromStart === " ") { ++counterFromStart; charSaverFromStart = fraseDaVerificare[counterFromStart]; }
+        while (charSaverFromEnd === " ") { --counterFromEnd; charSaverFromEnd = fraseDaVerificare[counterFromEnd]; }
+
             if (charSaverFromStart === charSaverFromEnd) {
                 --counterFromEnd
                 ++counterFromStart
@@ -84,6 +88,10 @@ function isPalindromaRev(fraseDaVerificare) {
             console.log(charSaverFromStart);
             charSaverFromEnd = fraseDaVerificare[counterFromEnd];
             console.log(charSaverFromEnd);
+
+            
+        while (charSaverFromStart === " ") { ++counterFromStart; charSaverFromStart = fraseDaVerificare[counterFromStart]; }
+        while (charSaverFromEnd === " ") { --counterFromEnd; charSaverFromEnd = fraseDaVerificare[counterFromEnd]; }
 
             if (charSaverFromStart === charSaverFromEnd) {
                 --counterFromEnd
