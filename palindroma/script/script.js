@@ -53,9 +53,7 @@ function isPalindromaRev(fraseDaVerificare) {
         for (counterFromStart = 0; counterFromStart < (wordLength / 2);) {
 
             charSaverFromStart = fraseDaVerificare[counterFromStart];
-            console.log(charSaverFromStart);
             charSaverFromEnd = fraseDaVerificare[counterFromEnd];
-            console.log(charSaverFromEnd);
 
             if (charSaverFromStart === charSaverFromEnd) {
                 --counterFromEnd
