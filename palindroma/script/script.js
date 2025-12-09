@@ -77,4 +77,34 @@ function isPalindromaRev(fraseDaVerificare) {
         }
 
     }
+
+    if (wordLength % 2 === 1) {
+
+        for (counterFromStart = 0; counterFromStart < (wordLength / 2 + 0.5);) {
+
+            charSaverFromStart = fraseDaVerificare[counterFromStart];
+            console.log(charSaverFromStart);
+            charSaverFromEnd = fraseDaVerificare[counterFromEnd];
+            console.log(charSaverFromEnd);
+
+            if (charSaverFromStart === charSaverFromEnd) {
+                --counterFromEnd
+                ++counterFromStart
+            };
+
+
+            if (counterFromStart >= counterFromEnd) {
+                console.log("Wow la parola è palindroma!!");
+                break;
+            };
+
+            if (charSaverFromStart !== charSaverFromEnd) {
+
+                console.log("La parola non è palindroma!!");
+                break;
+            };
+
+        }
+
+    }
 }
